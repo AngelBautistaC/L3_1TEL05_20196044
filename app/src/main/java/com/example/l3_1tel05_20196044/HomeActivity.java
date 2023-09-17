@@ -1,4 +1,4 @@
-// HomeActivity.java
+
 package com.example.l3_1tel05_20196044;
 
 import android.content.Intent;
@@ -15,11 +15,19 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         Button btnIrACronometro = findViewById(R.id.btnIrACronometro);
+        // Agregar botón para ir a ContadorActivity
+        Button btnIrAContador = findViewById(R.id.btnIrAContador);
 
         btnIrACronometro.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, CronometroActivity.class);
+                // Código existente
+            }
+        });
+
+        // Listener para el nuevo botón
+        btnIrAContador.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ContadorActivity.class);
                 startActivity(intent);
             }
         });
